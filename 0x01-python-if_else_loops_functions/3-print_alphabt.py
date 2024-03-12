@@ -2,4 +2,4 @@
 for letter in "abcdefghijklmnopqrstuvwxyz":
     if letter == 'e' or letter == 'q':
         continue
-    print("{:c}".format(letter), end="")
+    print("{}".format(letter), end="")
