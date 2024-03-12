@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 for letter in range(97, 122):
-    if letter == e, or letters == q:
+    if letter == ord(e) or letters == ord(q):
         continue
     print("{:c}".format(letter), end="")
