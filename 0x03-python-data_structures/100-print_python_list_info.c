@@ -1,4 +1,3 @@
-#include <Python.h>
 #include <sys/types.h>
 #include <pyport.h>
 #include <object.h>
