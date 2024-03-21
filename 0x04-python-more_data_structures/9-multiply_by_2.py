@@ -5,5 +5,4 @@ def multiply_by_2(a_dictionary):
 
     for item in lst:
         cpy_dict[item] = cpy_dict[item] * 2
-    
     return (cpy_dict)
