@@ -1,0 +1,36 @@
+Test for the module ```100-matrix_mul``` function ```matrix_mul```
+====================================================================
+Import the function.
+
+>>> matrix = __import__('100-matrix_mul').matrix_mul
+
+Test the parameters.
+
+	>>> print(matrix([[1, 2], [3, 4]], [[1, 2], [3, 4]]))
+	[[7, 10], [15, 22]]
+
+	>>> print(matrix([[1, 2]], [[1, 2], [3, 4]]))
+	[[7, 10]]
+
+Test values:
+	>>> print(matrix([[], [3, 4]], [[1, 2]]))
+	Traceback (most recent call last):
+	...
+	ValueError: m_a can't be empty
+
+	>>> print(matrix([[(1,)], [[1, 2], [3, 4]]]))
+	Traceback (most recent call last):
+	...
+	TypeError: matrix_mul() missing 1 required positional argument: 'm_b'
+
+	>>> print(matrix([[1, 2]], [[1, 2], [3]]))
+	Traceback (most recent call last):
+	...
+	TypeError: each row of m_b must be of the same size
+
+	>>> print(matrix([[1, 2], [3, 4]], [[1, 2]]))
+	Traceback (most recent call last):
+	...
+	ValueError: m_a and m_b can't be multiplied
+
+	>>> print(matrix([[()], [[1, 2]]]
