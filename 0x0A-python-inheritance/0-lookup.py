@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""look up function definition
+"""
+look up function definition
 """
 
 
@@ -10,6 +11,5 @@ def lookup(obj):
 	of an object
 	"""
 	
-
 	return(dir(object))
 
