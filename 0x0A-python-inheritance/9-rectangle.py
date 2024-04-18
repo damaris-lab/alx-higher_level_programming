@@ -1,45 +1,31 @@
-seGeometry module
+#!/usr/bin/python3
+"""
+baseclass - BaseGeometry and subclass - Rectangle
 """
 
 
-class BaseGeometry:
-    """The BaseGeometry class"""
-
-    pass
-
-    def area(self):
-        """area: raises an exception"""
-
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        """
-        integer_validator: validates value
-        name: A name
-        value: An integer
-        """
-
-        if not isinstance(value, int) or value is True:
-            raise TypeError(f'{name} must be an integer')
-        elif value <= 0:
-            raise ValueError(f'{name} must be greater than 0')
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-    """The rectangle class"""
+    """
+    Rectangle definition
+    inherits from BaseGometry
+    """
 
     def __init__(self, width, height):
-        super().integer_validator("width", width)
-        super().integer_validator("height", height)
+        """ Rectangle initialization """
+        self.integer_validator("width", width)
         self.__width = width
+        self.integer_validator('height', height)
         self.__height = height
 
     def area(self):
-        """The area class"""
-
+        """ method returns rectangle area """
         return self.__width * self.__height
 
     def __str__(self):
-        """returns string representation of rectangle"""
-
-        return '[Rectangle] {}/{}'.format(self.__width, self.__height)
+        """ method returns rectangle description """
+        text = '[' + str(self.__class__.__name__) + '] '
+        text += str(self.__width) + '/' + str(self.__height)
+        return (text)
