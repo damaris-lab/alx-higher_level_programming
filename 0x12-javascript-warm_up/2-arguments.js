@@ -1,14 +1,8 @@
 #!/usr/bin/node
-const printMessage = (...args) => {
-  const numArgs = args.length;
-
-  if (numArgs === 0) {
-    console.log("No argument");
-  } else if (numArgs === 1) {
-    console.log("Argument found");
-  } else {
-    console.log("Arguments found");
-  }
-};
-
-module.exports = { printMessage };
+if (process.argv.length <= 2) {
+  console.log('No argument');
+} else if (process.argv.length === 3) {
+  console.log('Argument found');
+} else {
+  console.log('Arguments found');
+}
